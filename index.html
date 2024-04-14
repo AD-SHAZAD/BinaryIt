@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Binary Maker </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        #btn_binary{
+            border-top-left-radius: 0;
+        }
+        #btn_about{
+            border-bottom-right-radius: 0%;
+        }
+        *{
+            transition: 0.1s all ease;
+            font-family: "VT323", monospace;
+            font-weight: 400;
+            font-style: normal;
+        }
+        body{
+            background-color: bisque;
+            overflow: hidden;
+        }
+        #home{
+            background-color: transparent;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        #home > div{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .home_buttons{
+            border: 2px solid black;
+            color: black;
+            background-color: antiquewhite;
+            border-radius: 20px;
+            font-size: 30px;
+            font-weight: 200;
+        }
+        @media (max-width: 758px) {
+            .home_buttons{
+                height: 10vh;
+                width: calc( 100% - 20px);
+            }
+            #home > div {
+                width: 80%;
+                height: 60vh;
+                /* padding: 20px; */
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h1{
+                margin: 20px;
+            }
+        }
+        @media (min-width: 758px){
+            .home_buttons{
+                height: 15vh;
+                width: 50%;
+            }
+            #home > div{
+                width: 60%;
+            }
+
+        }
+        .home_buttons:hover{
+            box-shadow: 5px 5px 0 gray;
+            scale: 1.02;
+            text-decoration: underline;
+        }
+        #home h1{
+            font-size: 80px;
+        }
+
+        div{
+            border-top: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <section id="home">
+        <div>
+            <h1>
+                Binary MeCH
+            </h1>
+            <button class="home_buttons" id="btn_binary"> BinaryIt </button>
+            <button class="home_buttons" id="btn_about"> About </button>
+
+        </div>
+        <p> @ad_shazxx </p>
+    </section>
+    <script>
+        document.getElementById("btn_binary").addEventListener('click', () => {
+            window.location.href = "Binary.html"
+        })
+        document.getElementById('btn_about').addEventListener('click', () => {
+            window.location.href = "about.html"
+        } )
+    </script>
+</body>
+</html>
